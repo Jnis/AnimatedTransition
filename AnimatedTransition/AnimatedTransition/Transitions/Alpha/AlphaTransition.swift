@@ -14,15 +14,15 @@ extension AlphaTransition {
     struct PresenterInfo {
         let frame: CGRect
         let alphaView: UIView
-        let prepare: (() -> ())
-        let animation: (() -> ())
-        let finish: (() -> ())
+        let prepare: () -> Void
+        let animation: () -> Void
+        let finish: () -> Void
     }
     
     struct PresentableInfo {
-        let prepare: (() -> ())
-        let animation: (() -> ())
-        let finish: (() -> ())
+        let prepare: () -> Void
+        let animation: () -> Void
+        let finish: () -> Void
     }
     
 }

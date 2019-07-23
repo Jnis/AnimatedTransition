@@ -38,8 +38,8 @@ extension AlphaTransition {
             transitionContext.containerView.addSubview(self.presenterInfo.alphaView)
             self.presentableInfo.prepare()
             self.presenterInfo.prepare()
-            self.presenterInfo.alphaView.frame = transitionContext.containerView.bounds
-            self.presenterInfo.alphaView.alpha = 0
+            self.presenterInfo.alphaView.frame = self.presentableInfo.frame ?? transitionContext.containerView.bounds
+            self.presenterInfo.alphaView.alpha = self.presentableInfo.byAlpha ? 0 : 1
             transitionContext.containerView.layoutIfNeeded()
             
             //Prepare the animator

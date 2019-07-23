@@ -20,9 +20,18 @@ extension AlphaTransition {
     }
     
     struct PresentableInfo {
+        let frame: CGRect? //default fullscreen
+        let byAlpha: Bool //default true
         let prepare: () -> Void
         let animation: () -> Void
         let finish: () -> Void
+        init(frame: CGRect? = nil, byAlpha: Bool = true, prepare: @escaping () -> Void, animation: @escaping () -> Void, finish: @escaping () -> Void) {
+            self.frame = frame
+            self.byAlpha = byAlpha
+            self.prepare = prepare
+            self.animation = animation
+            self.finish = finish
+        }
     }
     
 }

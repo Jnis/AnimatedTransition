@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0C1-qy-NuO">
-                                        <rect key="frame" x="0.0" y="10" width="375" height="310"/>
+                                        <rect key="frame" x="0.0" y="10" width="375" height="848"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-J2-XLi" customClass="PigButton" customModule="AnimatedTransition" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
@@ -61,6 +61,32 @@
                                                 <connections>
                                                     <action selector="mapButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhq-RQ-miE"/>
                                                 </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jJ-dq-NtX" customClass="PigButton" customModule="AnimatedTransition" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="320" width="375" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="r0F-Tr-W8e"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="toFrameButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ezz-63-2Xu"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8UN-Ft-UfJ" customClass="SmallImageButton" customModule="AnimatedTransition" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="530" width="375" height="180"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="Xy3-7B-RjX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="withoutAlphaButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dw-3u-LTQ"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cv4-uv-j4y">
+                                                <rect key="frame" x="0.0" y="720" width="375" height="128"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="CaB-Dt-wsc"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -86,8 +112,12 @@
                     <connections>
                         <outlet property="mapButton" destination="nzD-4K-wjY" id="mZx-7y-2iL"/>
                         <outlet property="pigButton" destination="qXz-J2-XLi" id="GbM-mL-hSq"/>
+                        <outlet property="toFrameButton" destination="1jJ-dq-NtX" id="8ku-8x-35g"/>
+                        <outlet property="withoutAlphaButton" destination="8UN-Ft-UfJ" id="qe2-14-HzQ"/>
                         <segue destination="1b6-V8-gLP" kind="presentation" identifier="openPigDetails" id="pSf-Hw-E8w"/>
                         <segue destination="nk1-sj-K7m" kind="presentation" identifier="openMapDetails" id="P0Y-At-3bR"/>
+                        <segue destination="o2K-zu-7dh" kind="presentation" identifier="openToFrameDetails" id="GwG-9Z-bJd"/>
+                        <segue destination="SQV-bB-vfe" kind="presentation" identifier="openWithoutAlphaDetails" id="73U-3x-lPQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,7 +132,7 @@
                         <viewControllerLayoutGuide type="top" id="JeE-XO-70Z"/>
                         <viewControllerLayoutGuide type="bottom" id="PYK-Ak-xN6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9ap-y9-JrX">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="9ap-y9-JrX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -139,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOM-36-bmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="577"/>
+            <point key="canvasLocation" x="1217" y="737"/>
         </scene>
         <!--Pig View Controller-->
         <scene sceneID="ctZ-PV-Eji">
@@ -149,7 +179,7 @@
                         <viewControllerLayoutGuide type="top" id="3Fc-An-irD"/>
                         <viewControllerLayoutGuide type="bottom" id="8pz-V2-9Yp"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="E87-gc-hXj">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="E87-gc-hXj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -256,7 +286,246 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gb-EX-YFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="-88"/>
+            <point key="canvasLocation" x="1140" y="-271"/>
+        </scene>
+        <!--To Frame View Controller-->
+        <scene sceneID="gxb-Mr-BrJ">
+            <objects>
+                <viewController storyboardIdentifier="PigSmallViewController" id="o2K-zu-7dh" customClass="ToFrameViewController" customModule="AnimatedTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lE2-0d-pes"/>
+                        <viewControllerLayoutGuide type="bottom" id="CxC-2X-j40"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="fkw-T1-du8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pig" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-Zg-xIO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="NXK-2z-Qya"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqI-o6-V6b">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-Pi-XkA">
+                                        <rect key="frame" x="0.0" y="200" width="375" height="612"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="gLi-AS-PJC">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ji-8W-w5S">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="biP-Ud-9t3">
+                                                                <rect key="frame" x="10" y="10" width="355" height="156"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run Pig Run!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewt-JG-suA">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="44.333333333333336"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCC-SA-nww">
+                                                                        <rect key="frame" x="0.0" y="54.333333333333321" width="355" height="101.66666666666669"/>
+                                                                        <string key="text">Only you can help out the little pig to escape slaughterhouse, where prepare amazing pork. And we don't promise you, that it will be easy, but it will be interesting and exciting!! The success of the little pig only in your hands.</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="biP-Ud-9t3" secondAttribute="bottom" id="D8i-Fg-kwE"/>
+                                                            <constraint firstItem="biP-Ud-9t3" firstAttribute="top" secondItem="8ji-8W-w5S" secondAttribute="top" constant="10" id="JsK-67-OMT"/>
+                                                            <constraint firstAttribute="trailing" secondItem="biP-Ud-9t3" secondAttribute="trailing" constant="10" id="NQS-Pg-UbR"/>
+                                                            <constraint firstItem="biP-Ud-9t3" firstAttribute="leading" secondItem="8ji-8W-w5S" secondAttribute="leading" constant="10" id="vol-L9-A7O"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fw-AK-mSK">
+                                                        <rect key="frame" x="0.0" y="512" width="375" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="ro5-kb-en0"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="gLi-AS-PJC" secondAttribute="bottom" id="1cJ-Jw-u81"/>
+                                            <constraint firstItem="gLi-AS-PJC" firstAttribute="top" secondItem="ho4-Pi-XkA" secondAttribute="top" id="LzA-C1-xoA"/>
+                                            <constraint firstItem="gLi-AS-PJC" firstAttribute="leading" secondItem="ho4-Pi-XkA" secondAttribute="leading" id="aYE-HL-iKa"/>
+                                            <constraint firstAttribute="trailing" secondItem="gLi-AS-PJC" secondAttribute="trailing" id="x6J-c0-8XF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ho4-Pi-XkA" secondAttribute="bottom" id="06L-OR-qhr"/>
+                                    <constraint firstAttribute="trailing" secondItem="ho4-Pi-XkA" secondAttribute="trailing" id="SLc-MQ-xg4"/>
+                                    <constraint firstItem="ho4-Pi-XkA" firstAttribute="leading" secondItem="oqI-o6-V6b" secondAttribute="leading" id="etX-eW-MF8"/>
+                                    <constraint firstItem="ho4-Pi-XkA" firstAttribute="width" secondItem="oqI-o6-V6b" secondAttribute="width" id="iZc-mz-TgF"/>
+                                    <constraint firstItem="ho4-Pi-XkA" firstAttribute="top" secondItem="oqI-o6-V6b" secondAttribute="top" constant="200" id="pn1-G9-2MH"/>
+                                    <constraint firstItem="ho4-Pi-XkA" firstAttribute="height" relation="greaterThanOrEqual" secondItem="oqI-o6-V6b" secondAttribute="height" constant="-200" id="r4T-Bq-b8I"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs6-B5-6Cl">
+                                <rect key="frame" x="299" y="44" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Pq0-hc-qtH"/>
+                                    <constraint firstAttribute="height" constant="60" id="hfP-O4-Chc"/>
+                                </constraints>
+                                <state key="normal" image="close">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeAction:" destination="o2K-zu-7dh" eventType="touchUpInside" id="nWi-Gz-ntk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fs6-B5-6Cl" secondAttribute="trailing" id="dTx-aP-j8t"/>
+                            <constraint firstAttribute="trailing" secondItem="oqI-o6-V6b" secondAttribute="trailing" id="fUA-db-aRA"/>
+                            <constraint firstItem="oqI-o6-V6b" firstAttribute="height" secondItem="fkw-T1-du8" secondAttribute="height" id="jqj-H5-nrX"/>
+                            <constraint firstItem="fs6-B5-6Cl" firstAttribute="top" secondItem="lE2-0d-pes" secondAttribute="bottom" id="kCk-nY-9uV"/>
+                            <constraint firstItem="ZgR-Zg-xIO" firstAttribute="centerX" secondItem="fkw-T1-du8" secondAttribute="centerX" id="lQB-ls-OTT"/>
+                            <constraint firstItem="oqI-o6-V6b" firstAttribute="centerY" secondItem="fkw-T1-du8" secondAttribute="centerY" id="owg-Nc-tWg"/>
+                            <constraint firstItem="ZgR-Zg-xIO" firstAttribute="width" secondItem="fkw-T1-du8" secondAttribute="width" id="q5w-nT-a9N"/>
+                            <constraint firstItem="oqI-o6-V6b" firstAttribute="width" secondItem="fkw-T1-du8" secondAttribute="width" id="qfA-K8-H0p"/>
+                            <constraint firstItem="oqI-o6-V6b" firstAttribute="centerX" secondItem="fkw-T1-du8" secondAttribute="centerX" id="rdJ-wJ-MiF"/>
+                            <constraint firstItem="ZgR-Zg-xIO" firstAttribute="top" secondItem="fkw-T1-du8" secondAttribute="top" id="wOU-3J-vZk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pigImageView" destination="ZgR-Zg-xIO" id="NOn-OA-etR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzl-kn-bRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946" y="21"/>
+        </scene>
+        <!--Without Alpha View Controller-->
+        <scene sceneID="d45-Te-57I">
+            <objects>
+                <viewController storyboardIdentifier="WithoutAlphaViewController" id="SQV-bB-vfe" customClass="WithoutAlphaViewController" customModule="AnimatedTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pKF-0l-eo2"/>
+                        <viewControllerLayoutGuide type="bottom" id="cUC-Kd-778"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Q4P-ch-jpJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pig" translatesAutoresizingMaskIntoConstraints="NO" id="24o-qq-Ppt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="AsT-xh-cPt"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lM8-nf-aVL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-4s-DaN">
+                                        <rect key="frame" x="0.0" y="300" width="375" height="512"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="qgA-ak-jBf">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="512"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXk-dd-Ou6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bm4-Vx-vBz">
+                                                                <rect key="frame" x="10" y="10" width="355" height="156"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run Pig Run!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE3-XI-HbP">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="44.333333333333336"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u2-Qb-hdJ">
+                                                                        <rect key="frame" x="0.0" y="54.333333333333321" width="355" height="101.66666666666669"/>
+                                                                        <string key="text">Only you can help out the little pig to escape slaughterhouse, where prepare amazing pork. And we don't promise you, that it will be easy, but it will be interesting and exciting!! The success of the little pig only in your hands.</string>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="Bm4-Vx-vBz" secondAttribute="trailing" constant="10" id="QXp-Rk-3Et"/>
+                                                            <constraint firstItem="Bm4-Vx-vBz" firstAttribute="leading" secondItem="ZXk-dd-Ou6" secondAttribute="leading" constant="10" id="Trs-3T-gDG"/>
+                                                            <constraint firstItem="Bm4-Vx-vBz" firstAttribute="top" secondItem="ZXk-dd-Ou6" secondAttribute="top" constant="10" id="dhS-wR-znz"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Bm4-Vx-vBz" secondAttribute="bottom" id="rBr-HM-exR"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGR-Uu-WeZ">
+                                                        <rect key="frame" x="0.0" y="412" width="375" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="BOJ-zf-VWm"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="qgA-ak-jBf" firstAttribute="leading" secondItem="8wC-4s-DaN" secondAttribute="leading" id="Ppe-jy-zFO"/>
+                                            <constraint firstAttribute="bottom" secondItem="qgA-ak-jBf" secondAttribute="bottom" id="cUb-K3-6Jn"/>
+                                            <constraint firstItem="qgA-ak-jBf" firstAttribute="top" secondItem="8wC-4s-DaN" secondAttribute="top" id="rBJ-L5-lkv"/>
+                                            <constraint firstAttribute="trailing" secondItem="qgA-ak-jBf" secondAttribute="trailing" id="smg-Lw-9bg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8wC-4s-DaN" firstAttribute="width" secondItem="lM8-nf-aVL" secondAttribute="width" id="9np-42-hVN"/>
+                                    <constraint firstItem="8wC-4s-DaN" firstAttribute="top" secondItem="lM8-nf-aVL" secondAttribute="top" constant="300" id="BXG-x1-aW1"/>
+                                    <constraint firstAttribute="bottom" secondItem="8wC-4s-DaN" secondAttribute="bottom" id="BsM-9V-2vS"/>
+                                    <constraint firstAttribute="trailing" secondItem="8wC-4s-DaN" secondAttribute="trailing" id="RS8-c1-IAP"/>
+                                    <constraint firstItem="8wC-4s-DaN" firstAttribute="leading" secondItem="lM8-nf-aVL" secondAttribute="leading" id="X1G-cl-QFZ"/>
+                                    <constraint firstItem="8wC-4s-DaN" firstAttribute="height" relation="greaterThanOrEqual" secondItem="lM8-nf-aVL" secondAttribute="height" constant="-300" id="hCd-79-kEb"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjU-bZ-ulY">
+                                <rect key="frame" x="299" y="44" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Lga-Yc-Xz4"/>
+                                    <constraint firstAttribute="height" constant="60" id="Uzb-0c-hOP"/>
+                                </constraints>
+                                <state key="normal" image="close">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeAction:" destination="SQV-bB-vfe" eventType="touchUpInside" id="ifD-7X-Ugq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lM8-nf-aVL" secondAttribute="trailing" id="35k-cM-9bH"/>
+                            <constraint firstItem="lM8-nf-aVL" firstAttribute="centerX" secondItem="Q4P-ch-jpJ" secondAttribute="centerX" id="4su-B3-hWJ"/>
+                            <constraint firstItem="24o-qq-Ppt" firstAttribute="width" secondItem="Q4P-ch-jpJ" secondAttribute="width" id="5HW-u5-xnd"/>
+                            <constraint firstItem="SjU-bZ-ulY" firstAttribute="top" secondItem="pKF-0l-eo2" secondAttribute="bottom" id="Kco-QB-UZu"/>
+                            <constraint firstItem="24o-qq-Ppt" firstAttribute="centerX" secondItem="Q4P-ch-jpJ" secondAttribute="centerX" id="P2E-Ct-bZN"/>
+                            <constraint firstItem="lM8-nf-aVL" firstAttribute="height" secondItem="Q4P-ch-jpJ" secondAttribute="height" id="Wbk-Z8-wrU"/>
+                            <constraint firstItem="lM8-nf-aVL" firstAttribute="centerY" secondItem="Q4P-ch-jpJ" secondAttribute="centerY" id="Yqb-PK-B6Q"/>
+                            <constraint firstItem="lM8-nf-aVL" firstAttribute="width" secondItem="Q4P-ch-jpJ" secondAttribute="width" id="jNM-aT-sis"/>
+                            <constraint firstItem="24o-qq-Ppt" firstAttribute="top" secondItem="Q4P-ch-jpJ" secondAttribute="top" id="kAl-wF-Ckh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SjU-bZ-ulY" secondAttribute="trailing" id="tjG-Ks-Qrq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="SjU-bZ-ulY" id="wUf-SB-V6X"/>
+                        <outlet property="pigImageView" destination="24o-qq-Ppt" id="iTw-Wo-LYm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vij-ad-Nmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="499"/>
         </scene>
     </scenes>
     <resources>

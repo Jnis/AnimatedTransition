@@ -33,6 +33,10 @@ extension AlphaTransition {
             //            guard let fromVC = transitionContext.viewController(forKey: .to) else { return }
             guard let destinationVC = transitionContext.viewController(forKey: .to) else { return }
             
+            if destinationVC.view.clipsToBounds == false {
+                NSLog("WARNING: Please, set \(String(describing: destinationVC.self)).view.clipsToBounds = true")
+            }
+            
             //Add destination view to the container at the position of the cell
             transitionContext.containerView.addSubview(destinationVC.view)
             transitionContext.containerView.addSubview(self.presenterInfo.alphaView)
@@ -49,8 +53,8 @@ extension AlphaTransition {
                 destinationVC.view.frame = transitionContext.containerView.bounds
                 self.presentableInfo.animation()
                 self.presenterInfo.animation()
-                self.presenterInfo.alphaView.frame = transitionContext.containerView.bounds
-                self.presenterInfo.alphaView.alpha = 0
+                self.presenterInfo.alphaView.frame = self.presentableInfo.frame ?? transitionContext.containerView.bounds
+                self.presenterInfo.alphaView.alpha = self.presentableInfo.byAlpha ? 0 : 1
             }
             
             animator.addCompletion { (_) in

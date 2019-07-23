@@ -1,8 +1,8 @@
 //
-//  PigButton.swift
+//  SmallImageButton.swift
 //  AnimatedTransition
 //
-//  Created by Yanis Plumit on 21/07/2019.
+//  Created by Yanis Plumit on 23/07/2019.
 //  Copyright © 2019 Yanis Plumit. All rights reserved.
 //
 
@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 
 //@IBDesignable
-class PigButton: UIButton {
+class SmallImageButton: UIButton {
     @IBOutlet weak var pigImageView: UIImageView!
-    @IBOutlet weak var pigLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,7 +36,7 @@ class PigButton: UIButton {
 
 // MARK: AlphaTransition presentable
 
-extension PigButton {
+extension SmallImageButton {
     
     func presenterAlphaView() -> UIView {
         let v = UIImageView()
@@ -52,12 +51,8 @@ extension PigButton {
                                              alphaView: presenterAlphaView(),
                                              prepare: {
                                                 self.pigImageView.alpha = 0
-                                                self.pigLabel.alpha = 0
-        },
-                                             animation: {},
-                                             finish: {
-                                                self.pigImageView.alpha = 1
-                                                self.pigLabel.alpha = 1
+        }, animation: {}, finish: {
+            self.pigImageView.alpha = 1
         })
     }
     
@@ -66,17 +61,8 @@ extension PigButton {
                                              alphaView: presenterAlphaView(),
                                              prepare: {
                                                 self.pigImageView.alpha = 0
-                                                self.pigLabel.alpha = 0
-        },
-                                             animation: {},
-                                             finish: {
-                                                self.pigImageView.alpha = 1
-                                                self.pigLabel.alpha = 1
-                                                self.pigLabel.transform = CGAffineTransform(translationX: 0, y: self.pigLabel.bounds.size.height)
-                                                UIViewPropertyAnimator(duration: 0.4, dampingRatio: 0.7) {
-                                                    self.pigLabel.transform = CGAffineTransform.identity
-                                                    }.startAnimation()
-                                                
+        }, animation: {}, finish: {
+            self.pigImageView.alpha = 1
         })
     }
 }

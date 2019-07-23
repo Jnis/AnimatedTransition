@@ -24,6 +24,10 @@
 		813D2A4B22E4A95A00218140 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D2A4A22E4A95A00218140 /* UIViewController+Storyboard.swift */; };
 		813D2A5022E4AE4300218140 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D2A4F22E4AE4300218140 /* MapViewController.swift */; };
 		813D2A5222E4AE5600218140 /* PigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813D2A5122E4AE5600218140 /* PigViewController.swift */; };
+		814DEC8F22E7006C00E5A485 /* ToFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DEC8E22E7006C00E5A485 /* ToFrameViewController.swift */; };
+		814DEC9222E7890600E5A485 /* WithoutAlphaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DEC9122E7890600E5A485 /* WithoutAlphaViewController.swift */; };
+		814DEC9422E78A5100E5A485 /* SmallImageButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814DEC9322E78A5100E5A485 /* SmallImageButton.xib */; };
+		814DEC9622E78A6700E5A485 /* SmallImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DEC9522E78A6700E5A485 /* SmallImageButton.swift */; };
 		81F278FF22E5FE50000D2B81 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F278FE22E5FE50000D2B81 /* UIView+Snapshot.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,10 @@
 		813D2A4A22E4A95A00218140 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		813D2A4F22E4AE4300218140 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		813D2A5122E4AE5600218140 /* PigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigViewController.swift; sourceTree = "<group>"; };
+		814DEC8E22E7006C00E5A485 /* ToFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToFrameViewController.swift; sourceTree = "<group>"; };
+		814DEC9122E7890600E5A485 /* WithoutAlphaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutAlphaViewController.swift; sourceTree = "<group>"; };
+		814DEC9322E78A5100E5A485 /* SmallImageButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallImageButton.xib; sourceTree = "<group>"; };
+		814DEC9522E78A6700E5A485 /* SmallImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallImageButton.swift; sourceTree = "<group>"; };
 		81F278FE22E5FE50000D2B81 /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +106,8 @@
 				813D2A3322DFB4A100218140 /* Menu */,
 				813D2A4E22E4AE2D00218140 /* Pig */,
 				813D2A4D22E4AE2300218140 /* Map */,
+				814DEC8D22E7003800E5A485 /* ToFrame */,
+				814DEC9022E788BC00E5A485 /* WithoutAlpha */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -110,6 +120,8 @@
 				813D2A3F22E47F3E00218140 /* PigButton.swift */,
 				813D2A4422E49AF000218140 /* MapButton.xib */,
 				813D2A4622E49B4000218140 /* MapButton.swift */,
+				814DEC9322E78A5100E5A485 /* SmallImageButton.xib */,
+				814DEC9522E78A6700E5A485 /* SmallImageButton.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -157,6 +169,22 @@
 				813D2A5122E4AE5600218140 /* PigViewController.swift */,
 			);
 			path = Pig;
+			sourceTree = "<group>";
+		};
+		814DEC8D22E7003800E5A485 /* ToFrame */ = {
+			isa = PBXGroup;
+			children = (
+				814DEC8E22E7006C00E5A485 /* ToFrameViewController.swift */,
+			);
+			path = ToFrame;
+			sourceTree = "<group>";
+		};
+		814DEC9022E788BC00E5A485 /* WithoutAlpha */ = {
+			isa = PBXGroup;
+			children = (
+				814DEC9122E7890600E5A485 /* WithoutAlphaViewController.swift */,
+			);
+			path = WithoutAlpha;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +247,7 @@
 			files = (
 				813D2A2B22DFB15800218140 /* LaunchScreen.storyboard in Resources */,
 				813D2A2822DFB15800218140 /* Assets.xcassets in Resources */,
+				814DEC9422E78A5100E5A485 /* SmallImageButton.xib in Resources */,
 				813D2A2622DFB15100218140 /* Main.storyboard in Resources */,
 				813D2A3E22E47DC600218140 /* PigButton.xib in Resources */,
 				813D2A4522E49AF000218140 /* MapButton.xib in Resources */,
@@ -233,12 +262,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				813D2A5022E4AE4300218140 /* MapViewController.swift in Sources */,
+				814DEC9222E7890600E5A485 /* WithoutAlphaViewController.swift in Sources */,
 				813D2A5222E4AE5600218140 /* PigViewController.swift in Sources */,
 				813D2A2322DFB15100218140 /* MenuViewController.swift in Sources */,
 				813D2A4722E49B4000218140 /* MapButton.swift in Sources */,
 				81F278FF22E5FE50000D2B81 /* UIView+Snapshot.swift in Sources */,
 				813D2A3C22E4606100218140 /* AlphaTransition+PresentAnimator.swift in Sources */,
 				813D2A4B22E4A95A00218140 /* UIViewController+Storyboard.swift in Sources */,
+				814DEC8F22E7006C00E5A485 /* ToFrameViewController.swift in Sources */,
+				814DEC9622E78A6700E5A485 /* SmallImageButton.swift in Sources */,
 				813D2A2122DFB15100218140 /* AppDelegate.swift in Sources */,
 				813D2A3622DFB7CD00218140 /* AlphaTransition.swift in Sources */,
 				813D2A3A22E4602400218140 /* AlphaTransition+DismissAnimator.swift in Sources */,
